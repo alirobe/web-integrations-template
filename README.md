@@ -33,7 +33,7 @@ For OpSec reasons I won't give any further guidance.
 
 - Ensure node version manager (`nvm`) is installed on your machine.
 - cd to this directory
-- `nvm install lts` (18.18 at time of writing)
+- `nvm install <VERSION_NUMBER>` (check `.nvmrc` for version number)
 - `nvm use lts`
 - `npm install`
 - Use VS Code to create `local.settings.json` file in root, containing `{"$schema": "./local.settings.schema.json"}`. 
