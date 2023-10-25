@@ -1,0 +1,20 @@
+{
+    "$schema": "https://json.schemastore.org/tsconfig",
+    "compilerOptions": {
+        "module": "CommonJS",
+        "forceConsistentCasingInFileNames": true,
+        "strict": true,
+        "target": "ES2017",
+        "rootDir": "./src",
+        "outDir": "./dist",
+        "esModuleInterop": true,
+        "sourceMap": true,
+        "declaration": true,
+        "lib": ["ES2017", "DOM"]
+    },
+    "exclude": [
+        "service*/*.ts",
+        "node_modules",
+    "dist"
+    ]
+}

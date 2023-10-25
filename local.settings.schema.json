@@ -1,0 +1,59 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "Values": {
+            "type": "object",
+            "properties": {
+                "AZURE_CUSTOM_HEADER_TOKEN": {
+                    "type": "string",
+                    "description": "A secret token defined in the SSO headers for the proxy app",
+                    "examples": [
+                        "00000000-0000-0000-0000-000000000000"
+                    ]
+                },
+                "SERVICE_TYPE": {
+                    "type": "string", 
+                    "description": "Execution context for the service",
+                    "enum": [
+                        "docker",
+                        "windows",
+                        "dev"
+                    ]
+                },
+                "WEB_INTEGRATIONS_API_KEY" : {
+                    "type": "string",
+                    "description": "Used to authenticate users of this service",
+                    "examples": [
+                        "00000000-0000-0000-0000-000000000000"
+                    ]
+                },
+                "WEBSITE_BLOB_SAS": {
+                    "type": "string",
+                    "description": "Blob SAS URL (via Azure)",
+                    "examples": [
+                        "https://<URI>.blob.core.windows.net/<CONTAINER>?sv=<DATE>&sig=<SIG>&spr=https etc"
+                    ]
+                },
+                "PORT": {
+                    "type": "integer",
+                    "description": "The port to listen on",
+                    "examples": [
+                        8080, 3000
+                    ],
+                    "maximum": 65535,
+                    "minimum": 1
+                }
+            },
+            "required": [
+                "AZURE_CUSTOM_HEADER_TOKEN",
+                "SERVICE_TYPE",
+                "WEB_INTEGRATIONS_API_KEY",
+                "WEBSITE_BLOB_SAS"
+            ]
+        }
+    },
+    "required": [
+        "Values"
+    ]
+}
