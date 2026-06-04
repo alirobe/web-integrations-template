@@ -26,7 +26,7 @@ Typical jobs:
 
 - If you can use real Azure Functions (cloud data, Entra identity, no firewall blockers), do so.
 - If you need autoscaling beyond a single Windows box / container, consider other options.
-- If [Azure Local](https://azure.microsoft.com/en-us/products/local), [vendor alternatives](https://www.nutanix.com), or *just running a container* is preferable, please consider those options!
+- If [Azure Local](https://azure.microsoft.com/en-us/products/local), [arc/k8s](https://aka.ms/HybridPublicPreview), [vendor alternatives](https://www.nutanix.com), or *just running a container* is preferable, please consider those options!
 - If you'll hit above ~10 req/s, consider other options, or at least be sure to implement server-side caching.
 
 ## Comparison
